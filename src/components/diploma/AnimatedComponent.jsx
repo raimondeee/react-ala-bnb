@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
 class AnimatedComponent extends React.PureComponent {
-
   constructor() {
     super();
     this.state = {
-      animated: false,
+      animated: false
     };
     this.animate = () => {
       this.setState({ animated: true }, () => {
