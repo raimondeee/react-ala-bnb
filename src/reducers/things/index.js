@@ -11,6 +11,9 @@ export default function thingsReducer(state = initialState, action) {
         ...state,
         list: [].concat(state.list, [action.thing]),
       };
+
+    default:
+      break;
   }
 
   return state;

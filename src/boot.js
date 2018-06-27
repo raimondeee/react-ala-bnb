@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import App from './containers/App';
 
-const render = Inner => {
+const render = (Inner) => {
   ReactDOM.render(
     React.createElement(AppContainer, null, React.createElement(Inner)),
     document.getElementById('root'),

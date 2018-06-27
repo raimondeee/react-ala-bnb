@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+
 import * as actionTypes from './actionTypes';
 
 export function addThing(thing) {

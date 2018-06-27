@@ -18,6 +18,9 @@ export default function diplomaReducer(state = initialState, action) {
         ...state,
         studentName: action.payload,
       };
+
+    default:
+      break;
   }
 
   return state;
