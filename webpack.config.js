@@ -13,7 +13,7 @@ module.exports = {
   entry: [
     'airbnb-browser-shims',
     'react-hot-loader/patch',
-    path.join(paths.SRC, 'boot.js')
+    path.join(paths.SRC, 'boot.js'),
   ],
 
   output: {
