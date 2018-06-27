@@ -1,0 +1,52 @@
+{
+  "name": "react-ala-bnb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "dev": "webpack-dev-server",
+    "lint": "eslint ./",
+    "build": "webpack"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./test/setup.js",
+    "verbose": true
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-airbnb": "^2.4.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "airbnb-browser-shims": "^2.0.0",
+    "aphrodite": "^1.2.5",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-hot-loader": "^3.1.2",
+    "react-redux": "^5.0.6",
+    "react-with-styles": "^2.3.0",
+    "react-with-styles-interface-aphrodite": "^3.1.1",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2"
+  }
+}
