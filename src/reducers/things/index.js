@@ -1,7 +1,7 @@
-import { ADD_THING } from "../../helpers/actionTypes";
+import { ADD_THING } from '../../helpers/actionTypes';
 
 const initialState = {
-  list: ["hello world"]
+  list: ['hello world'],
 };
 
 export default function thingsReducer(state = initialState, action) {
@@ -9,7 +9,7 @@ export default function thingsReducer(state = initialState, action) {
     case ADD_THING:
       return {
         ...state,
-        list: [].concat(state.list, [action.thing])
+        list: [].concat(state.list, [action.thing]),
       };
   }
 

@@ -1,8 +1,8 @@
-import React from "react";
-import ThingList from "../components/ThingList";
-import Button from "../components/Button";
-import { addThing } from "../helpers/actionCreators";
-import { connect } from "react-redux";
+import React from 'react';
+import ThingList from '../components/ThingList';
+import Button from '../components/Button';
+import { addThing } from '../helpers/actionCreators';
+import { connect } from 'react-redux';
 
 class ThingContainer extends React.PureComponent {
   addThing = () => {
@@ -23,5 +23,5 @@ class ThingContainer extends React.PureComponent {
 }
 
 export default connect(state => ({
-  things: state.things.list
+  things: state.things.list,
 }))(ThingContainer);

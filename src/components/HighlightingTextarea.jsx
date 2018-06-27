@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { withStyles, css, withStylesPropTypes } from "../helpers/withStyles";
+import { withStyles, css, withStylesPropTypes } from '../helpers/withStyles';
 
 class HighlightingTextarea extends React.PureComponent {
   static propTypes = {
     ...withStylesPropTypes,
     initialHtml: PropTypes.string,
-    cssMap: PropTypes.objectOf(PropTypes.object)
+    cssMap: PropTypes.objectOf(PropTypes.object),
   };
 
   handleRef = ref => {
@@ -16,7 +16,7 @@ class HighlightingTextarea extends React.PureComponent {
     if (this.observer) {
       this.observer.disconnect();
     }
-    console.log("ref", ref);
+    console.log('ref', ref);
 
     const mu = new MutationObserver(this.handleMutation);
     mu.observe(ref, { characterData: true, subtree: true });
@@ -40,10 +40,7 @@ class HighlightingTextarea extends React.PureComponent {
       // assume focus from keyboard
       const { lastChild } = this.editor;
       // in a textarea, the default caret position is at the end
-      setCaretPositionWithin(
-        lastChild,
-        (lastChild.innerText || lastChild).length
-      );
+      setCaretPositionWithin(lastChild, (lastChild.innerText || lastChild).length);
     }
   };
 
@@ -55,7 +52,7 @@ class HighlightingTextarea extends React.PureComponent {
       for (let index = 0; index < els.length; index++) {
         const el = els[index];
         Object.entries(cssMap[tag]).forEach(([key, value]) => {
-          if (key === "style") {
+          if (key === 'style') {
             Object.entries(value).forEach(([sk, sv]) => {
               el.style[sk] = sv;
             });
@@ -116,7 +113,7 @@ function setCaretPositionWithin(element, chars = -1) {
 
 export default withStyles(() => ({
   container: {
-    border: "1px inset gray",
-    padding: 10
-  }
+    border: '1px inset gray',
+    padding: 10,
+  },
 }))(HighlightingTextarea);

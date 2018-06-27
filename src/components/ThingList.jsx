@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles, css, withStylesPropTypes } from "../helpers/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles, css, withStylesPropTypes } from '../helpers/withStyles';
 
-import Thing from "./Thing";
+import Thing from './Thing';
 
 class ThingList extends React.Component {
   static propTypes = {
     ...withStylesPropTypes,
-    things: PropTypes.array.isRequired
+    things: PropTypes.array.isRequired,
   };
 
   render() {
@@ -28,16 +28,16 @@ class ThingList extends React.Component {
 export default withStyles(({ color }) => ({
   container: {
     padding: 0,
-    display: "flex"
+    display: 'flex',
   },
 
   item: {
-    flex: "1",
-    display: "flex",
-    justifyContent: "center",
-    listStyleType: "none",
+    flex: '1',
+    display: 'flex',
+    justifyContent: 'center',
+    listStyleType: 'none',
     backgroundColor: color.secondary,
     padding: 10,
-    margin: 1
-  }
+    margin: 1,
+  },
 }))(ThingList);

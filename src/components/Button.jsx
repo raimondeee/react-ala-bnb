@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles, css, withStylesPropTypes } from "../helpers/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles, css, withStylesPropTypes } from '../helpers/withStyles';
 
 class Button extends React.PureComponent {
   static propTypes = {
     ...withStylesPropTypes,
     disabled: PropTypes.bool,
     children: PropTypes.node.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   handleRef = btn => {
@@ -18,8 +18,8 @@ class Button extends React.PureComponent {
     const { btn } = this;
     var x = e.pageX - btn.offsetLeft;
     var y = e.pageY - btn.offsetTop;
-    btn.style.setProperty("--x", x + "px");
-    btn.style.setProperty("--y", y + "px");
+    btn.style.setProperty('--x', x + 'px');
+    btn.style.setProperty('--y', y + 'px');
   };
 
   render() {
@@ -41,54 +41,54 @@ class Button extends React.PureComponent {
 
 export default withStyles(({ color }) => ({
   btn: {
-    userSelect: "none",
+    userSelect: 'none',
     padding: 0,
     borderRadius: 99,
-    border: "1px solid #AAA",
-    backgroundColor: "white",
+    border: '1px solid #AAA',
+    backgroundColor: 'white',
     marginRight: 2,
-    outline: "none",
-    fontSize: "200%",
-    position: "relative",
-    overflow: "hidden",
-    "::before": {
-      "--size": 0,
+    outline: 'none',
+    fontSize: '200%',
+    position: 'relative',
+    overflow: 'hidden',
+    '::before': {
+      '--size': 0,
       content: "''",
-      position: "absolute",
-      left: "var(--x)",
-      top: "var(--y)",
-      width: "var(--size)",
-      height: "var(--size)",
-      background: "radial-gradient(circle closest-side, yellow, transparent)",
-      transform: "translate(-50%, -50%)",
-      transition: "width .2s ease, height .2s ease"
-    }
+      position: 'absolute',
+      left: 'var(--x)',
+      top: 'var(--y)',
+      width: 'var(--size)',
+      height: 'var(--size)',
+      background: 'radial-gradient(circle closest-side, yellow, transparent)',
+      transform: 'translate(-50%, -50%)',
+      transition: 'width .2s ease, height .2s ease',
+    },
   },
 
   enabled: {
-    cursor: "pointer",
-    ":active": {
-      boxShadow: "inset 2px 1px 5px 0 #999"
+    cursor: 'pointer',
+    ':active': {
+      boxShadow: 'inset 2px 1px 5px 0 #999',
     },
-    ":hover": {
-      borderColor: "#666",
-      backgroundColor: "#AAA",
-      color: "white",
-      "::before": {
-        "--size": 200
-      }
+    ':hover': {
+      borderColor: '#666',
+      backgroundColor: '#AAA',
+      color: 'white',
+      '::before': {
+        '--size': 200,
+      },
     },
-    ":focus": {
-      borderStyle: "dotted"
-    }
+    ':focus': {
+      borderStyle: 'dotted',
+    },
   },
 
   disabled: {
-    opacity: 0.5
+    opacity: 0.5,
   },
 
   span: {
-    padding: "0 1em",
-    lineHeight: 2
-  }
+    padding: '0 1em',
+    lineHeight: 2,
+  },
 }))(Button);
