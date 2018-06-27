@@ -1,6 +1,6 @@
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import reducers from './reducers';
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import reducers from "./reducers";
 
 const store = createStore(
   reducers,
@@ -10,24 +10,24 @@ const store = createStore(
   composeWithDevTools(
     applyMiddleware(
       // thunk
-      (s) => next => action => {
-        typeof action === 'function' ?
-          action(s.dispatch, s.getState) :
-          next(action);
+      s => next => action => {
+        typeof action === "function"
+          ? action(s.dispatch, s.getState)
+          : next(action);
       },
       // promise
-      (s) => next => action => {
-        if (typeof action.then !== 'function') {
-          return next(action)
+      s => next => action => {
+        if (typeof action.then !== "function") {
+          return next(action);
         }
         return Promise.resolve(action).then(s.dispatch);
       },
       // logger
       () => next => action => {
         console.groupCollapsed(action.type);
-        console.info('dispatching', action);
+        console.info("dispatching", action);
         let result = next(action);
-        console.log('next state', store.getState());
+        console.log("next state", store.getState());
         console.groupEnd(action.type);
         return result;
       }

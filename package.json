@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server",
     "lint": "eslint ./",
     "build": "webpack",
-    "prettier": "prettier \"{src,test}/**/*.{js,jsx,css}\""
+    "prettier": "prettier --write \"{src,test}/**/*.{js,jsx,css}\""
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./test/setup.js",

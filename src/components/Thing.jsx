@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles, css, withStylesPropTypes } from '../helpers/withStyles';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles, css, withStylesPropTypes } from "../helpers/withStyles";
 
 class Thing extends React.PureComponent {
   static propTypes = {
@@ -13,27 +13,24 @@ class Thing extends React.PureComponent {
 
     return (
       <div {...css(styles.thing)}>
-        This is a thing!
-        &nbsp;
+        This is a thing! &nbsp;
         {this.props.children}
       </div>
     );
   }
 }
 
-export default withStyles(({color}) => ({
-
+export default withStyles(({ color }) => ({
   thing: {
     // minHeight: 100,
     // minWidth: 200,
     padding: 10,
     borderRadius: 10,
     border: `5px solid ${color.primary}`,
-    backgroundColor: 'white',
+    backgroundColor: "white",
 
-    ':hover': {
-      backgroundColor: color.secondary,
+    ":hover": {
+      backgroundColor: color.secondary
     }
   }
-
 }))(Thing);

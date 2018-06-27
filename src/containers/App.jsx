@@ -1,10 +1,10 @@
-import React from 'react';
-import Redux from 'redux';
-import store from '../store';
-import ThingContainer from './ThingContainer';
-import DiplomaContainer from './DiplomaContainer';
-import HighlightingTextarea from '../components/HighlightingTextarea';
-import { Provider } from 'react-redux';
+import React from "react";
+import Redux from "redux";
+import store from "../store";
+import ThingContainer from "./ThingContainer";
+import DiplomaContainer from "./DiplomaContainer";
+import HighlightingTextarea from "../components/HighlightingTextarea";
+import { Provider } from "react-redux";
 
 export default class App extends React.PureComponent {
   render() {
