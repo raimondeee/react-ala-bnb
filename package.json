@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
     "dev": "webpack-dev-server",
-    "lint": "eslint --ignore-path .gitignore ./",
     "build": "webpack",
+    "test": "jest --watchAll",
+    "lint": "eslint \"{src,test}/**/*.{js,jsx}\"",
     "prettier": "prettier --write \"{src,test}/**/*.{js,jsx,css}\""
   },
   "jest": {
@@ -31,6 +31,7 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-airbnb": "^2.5.1",
