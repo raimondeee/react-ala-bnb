@@ -1,6 +1,8 @@
 import React from 'react';
 import HelloBtn from '../../components/HelloBtn';
 
+// TODO: redux
+
 export default class HelloContainer extends React.PureComponent {
   state = {
     clicks: 0,
