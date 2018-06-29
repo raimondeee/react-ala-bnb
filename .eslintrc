@@ -1,8 +1,14 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
-    "arrow-parens": 0,
-    "implicit-arrow-linebreak": 0,
-    "object-curly-newline": 0
+    "prettier/prettier": 1,
+    "react/jsx-one-expression-per-line": 0
   }
 }

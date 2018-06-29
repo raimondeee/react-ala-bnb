@@ -5,7 +5,11 @@ const myStyle = {
 };
 
 function App() {
-  return <h1 style={myStyle}>hello</h1>;
+  return (
+    <h1 style={myStyle}>
+      hello <b>world</b>
+    </h1>
+  );
 }
 
 export default App;
