@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack",
+    "build": "webpack -p",
     "test": "jest --watchAll",
     "lint": "eslint \"{src,test}/**/*.{js,jsx}\"",
     "prettier": "prettier --write \"{src,test}/**/*.{js,jsx,css}\""

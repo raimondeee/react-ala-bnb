@@ -1,4 +1,4 @@
-import { HELLO_INCREMENT_CLICKS } from '../constants';
+import { HELLO_INCREMENT_CLICKS } from '../reducers/types';
 
 export function incrementClick(count = 1) {
   return {

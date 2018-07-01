@@ -1,4 +1,4 @@
-import { HELLO_INCREMENT_CLICKS } from '../../constants';
+import { HELLO_INCREMENT_CLICKS } from '../types';
 
 const initialState = {
   clicks: 0,
