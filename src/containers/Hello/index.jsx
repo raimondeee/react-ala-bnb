@@ -1,23 +1,47 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import HelloBtn from '../../components/HelloBtn';
+import { incrementClick, decrementClick } from '../../helpers/actions';
 
-// TODO: redux
+class HelloContainer extends React.PureComponent {
+  static propTypes = {
+    clicks: PropTypes.number,
+    incrementClick: PropTypes.func.isRequired,
+    decrementClick: PropTypes.func.isRequired,
+  };
 
-export default class HelloContainer extends React.PureComponent {
-  state = {
+  static defaultProps = {
     clicks: 0,
   };
 
-  increaseClicks = () => {
-    const { clicks } = this.state;
-    this.setState({
-      clicks: clicks + 1,
-    });
+  handleClickUp = () => {
+    this.props.incrementClick();
+  };
+
+  handleClickDown = () => {
+    this.props.decrementClick();
   };
 
   render() {
-    const { clicks } = this.state;
+    const { clicks } = this.props;
 
-    return <HelloBtn onClick={this.increaseClicks}>{clicks}</HelloBtn>;
+    return (
+      <div>
+        <h1>Hello world! clicks={clicks}</h1>
+        <HelloBtn onClick={this.handleClickUp}>&uarr;</HelloBtn>
+        <HelloBtn onClick={this.handleClickDown}>&darr;</HelloBtn>
+      </div>
+    );
   }
 }
+
+export default connect(
+  state => ({
+    clicks: state.hello.clicks,
+  }),
+  {
+    incrementClick,
+    decrementClick,
+  },
+)(HelloContainer);

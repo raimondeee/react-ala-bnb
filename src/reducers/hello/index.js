@@ -9,7 +9,7 @@ export default function thingsReducer(state = initialState, action) {
     case HELLO_INCREMENT_CLICKS:
       return {
         ...state,
-        clicks: state.clicks + 1,
+        clicks: state.clicks + action.count,
       };
 
     default:

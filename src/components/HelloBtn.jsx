@@ -5,7 +5,7 @@ import { withStyles, css, withStylesPropTypes } from '../helpers/withStyles';
 function HelloBtn({ styles, children, onClick }) {
   return (
     <button type="submit" onClick={onClick} {...css(styles.btn)}>
-      clicked {children} times
+      {children}
     </button>
   );
 }
