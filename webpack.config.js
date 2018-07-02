@@ -1,5 +1,5 @@
 const path = require('path');
-
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { NODE_ENV } = process.env;
@@ -16,7 +16,6 @@ module.exports = {
 
   entry: [
     // 'airbnb-browser-shims',
-    'react-hot-loader/patch',
     path.join(paths.SRC, 'boot.js'),
   ],
 
@@ -29,6 +28,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(paths.SRC, 'index.html'),
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   module: {

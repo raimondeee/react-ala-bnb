@@ -3,6 +3,8 @@
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
 
+const LOG = process.env.NODE_ENV !== 'production';
+
 const store = createStore(
   reducers,
 
@@ -24,11 +26,11 @@ const store = createStore(
     },
     // logger
     () => next => action => {
-      console.groupCollapsed(action.type);
-      console.info('dispatching', action);
+      LOG && console.groupCollapsed(action.type);
+      LOG && console.info('dispatching', action);
       const result = next(action);
-      console.log('next state', store.getState());
-      console.groupEnd(action.type);
+      LOG && console.log('next state', store.getState());
+      LOG && console.groupEnd(action.type);
       return result;
     },
   ),

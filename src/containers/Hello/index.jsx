@@ -6,13 +6,9 @@ import { incrementClick, decrementClick } from '../../helpers/actions';
 
 class HelloContainer extends React.PureComponent {
   static propTypes = {
-    clicks: PropTypes.number,
+    clicks: PropTypes.number.isRequired,
     incrementClick: PropTypes.func.isRequired,
     decrementClick: PropTypes.func.isRequired,
-  };
-
-  static defaultProps = {
-    clicks: 0,
   };
 
   handleClickUp = () => {

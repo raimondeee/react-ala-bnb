@@ -1,7 +1,14 @@
 {
   "presets": ["airbnb"],
   "plugins": [
-    "react-hot-loader/babel", 
+    "react-hot-loader/babel",
     "transform-class-properties"
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
 }
