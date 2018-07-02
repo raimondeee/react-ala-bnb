@@ -2,6 +2,8 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const { NODE_ENV } = process.env;
+
 // Constant with our paths
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
@@ -10,8 +12,11 @@ const paths = {
 
 // Webpack configuration
 module.exports = {
+
+  mode: NODE_ENV || 'development',
+
   entry: [
-    'airbnb-browser-shims',
+    // 'airbnb-browser-shims',
     'react-hot-loader/patch',
     path.join(paths.SRC, 'boot.js'),
   ],

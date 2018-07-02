@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import HelloBtn from '../../components/HelloBtn';
@@ -27,11 +27,11 @@ class HelloContainer extends React.PureComponent {
     const { clicks } = this.props;
 
     return (
-      <div>
+      <Fragment>
         <h1>Hello world! clicks={clicks}</h1>
         <HelloBtn onClick={this.handleClickUp}>&uarr;</HelloBtn>
         <HelloBtn onClick={this.handleClickDown}>&darr;</HelloBtn>
-      </div>
+      </Fragment>
     );
   }
 }
