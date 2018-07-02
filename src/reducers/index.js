@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import things from './things';
-import diploma from './diploma';
+import hello from './hello';
 
 export default combineReducers({
-  things,
-  diploma,
+  hello,
 });

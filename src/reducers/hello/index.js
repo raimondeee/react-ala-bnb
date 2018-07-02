@@ -1,15 +1,15 @@
-import { ADD_THING } from '../../helpers/actionTypes';
+import { HELLO_INCREMENT_CLICKS } from '../types';
 
 const initialState = {
-  list: ['hello world'],
+  clicks: 0,
 };
 
 export default function thingsReducer(state = initialState, action) {
   switch (action.type) {
-    case ADD_THING:
+    case HELLO_INCREMENT_CLICKS:
       return {
         ...state,
-        list: [].concat(state.list, [action.thing]),
+        clicks: state.clicks + action.count,
       };
 
     default:
