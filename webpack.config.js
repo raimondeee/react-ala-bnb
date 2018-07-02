@@ -12,7 +12,6 @@ const paths = {
 
 // Webpack configuration
 module.exports = {
-
   mode: NODE_ENV || 'development',
 
   entry: [
