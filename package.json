@@ -7,10 +7,10 @@
     "url": "https://github.com/gaarf/react-ala-bnb"
   },
   "scripts": {
-    "dev": "webpack-dev-server --hot",
+    "dev": "webpack-serve",
     "build": "webpack -p",
-    "test": "jest --watchAll",
-    "coverage": "jest --coverage",
+    "test": "jest --coverage",
+    "watch": "jest --watchAll",
     "lint": "eslint \"{src,test}/**/*.{js,jsx}\"",
     "prettier": "prettier --write \"{src,test}/**/*.{js,jsx,css}\""
   },
@@ -67,7 +67,7 @@
     "raf": "^3.4.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.14.0",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-serve": "^1.0.4"
   },
   "dependencies": {
     "airbnb-browser-shims": "^3.0.0",
