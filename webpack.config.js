@@ -13,8 +13,11 @@ const paths = {
 module.exports = {
   mode: NODE_ENV || 'development',
 
+  devtool: 'source-map',
+
   entry: [
-    // 'airbnb-browser-shims',
+    // 'airbnb-js-shims/target/es2015',
+    // 'airbnb-browser-shims/browser-only',
     path.join(paths.SRC, 'boot.js'),
   ],
 
@@ -32,7 +35,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(jsx?)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
@@ -42,7 +45,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
