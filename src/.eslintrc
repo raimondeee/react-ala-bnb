@@ -1,8 +1,5 @@
 {
   "env": {
     "browser": true
-  },
-  "rules": {
-    "prettier/prettier": 1
   }
 }
